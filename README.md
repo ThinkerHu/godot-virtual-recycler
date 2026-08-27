@@ -4,6 +4,12 @@ RecyclerView-style virtualized list component for Godot 4.x. It keeps a bounded 
 
 This repository contains both the reusable component and a runnable demo. The component is written in GDScript and has no third-party dependencies.
 
+## Demo
+
+The screenshot below is captured from the Android demo running on a real device. It shows the virtualized list, dynamic row heights, multiple data types, and the live active-cell/reuse-pool counters.
+
+![VirtualRecycler Android demo](docs/images/virtual-recycler-demo.png)
+
 ## Features
 
 - Visible-range virtualization with overscan and Cell reuse.
@@ -66,8 +72,6 @@ recycler.metrics_changed.connect(_on_metrics_changed)
 ```
 
 `metrics_changed(active_count, pool_count, first_index, last_index)` is useful for triggering pagination when `last_index` approaches the end of the loaded data.
-
-## Demo
 
 Open this repository as a Godot project and run `main.tscn`. The demo shows 10,000 logical records loaded in pages of 120, dynamic 96px/128px rows, insert/remove/local update, pagination, smooth index jump, and active Cell/reuse-pool counters.
 
